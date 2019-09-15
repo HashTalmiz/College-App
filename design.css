@@ -1,0 +1,117 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 30px;
+}
+.container{ 
+  padding: 1px;
+  display: grid;
+  grid-gap:5px;
+  grid-template-rows:200px 300px 100px;
+  align-content: stretch;
+}
+
+#ramaiah{
+  display: table;
+  margin: 0 auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+.grid-item{
+}
+.item-2{
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+
+
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #6dbdf3;
+}
+
+.login {
+  width: 300px;
+  margin: 16px auto;
+  font-size: 12px;
+}
+
+/* Reset top and bottom margins from certain elements */
+.login-header,
+.login p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+
+.login-header {
+  background: #28d;
+  padding: 10px;
+  font-size: 1.9em;
+  font-weight: normal;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.login-container {
+  background: #ebebeb;
+  padding: 8px;
+}
+
+/* Every row inside .login-container is defined with p tags */
+.login p {
+  padding: 8px;
+}
+
+.login input {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  border-width: 1px;
+  border-style: solid;
+  padding: 10px;
+  outline: 0;
+  font-family: inherit;
+  font-size: 0.6em;
+}
+
+.login input[type="email"],
+.login input[type="password"] {
+  background: #fff;
+  border-color: #bbb;
+  color: #555;
+}
+
+/* Text fields' focus effect */
+.login input[type="email"]:focus,
+.login input[type="password"]:focus {
+  border-color: #888;
+}
+
+.login input[type="submit"] {
+  background: #28d;
+  border-color: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+
+.login input[type="submit"]:hover {
+  background: #17c;
+}
+
+/* Buttons' focus effect */
+.login input[type="submit"]:focus {
+  border-color: #05a;
+}
+
+/** Commands for grid:
+* grid-template: rows/columns;
+* grid-gap:
+* repeat(no of times,size);
+* minmax(min,max);
+* justify-items;
+* justify-content;
