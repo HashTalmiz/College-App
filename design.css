@@ -27,6 +27,7 @@
 }
 .item-3{
   text-align: center;
+  font-size: 30px;
 }
 
 
@@ -63,8 +64,7 @@ body {
   background: #ebebeb;
   padding: 8px;
   display: grid;
-
-
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 /* Every row inside .login-container is defined with p tags */
@@ -120,6 +120,10 @@ body {
   padding: 13px;
   color:#17c;
 }
+.lol:hover{
+  color: red;
+  cursor: pointer;
+}
 .b, #troll{
   visibility: hidden;
   height: 70px;
@@ -131,11 +135,31 @@ body {
 }
 
 #popup{
-  position: absolute;
-  border: 1px dotted;
-  height: 200px !important;
-  width: 300px !important;
-  left: 50%;
-  top: 50%;
+  visibility: hidden;
+  position: fixed;
+  text-align: center;
+  height: 250px !important;
+  width: 500px !important;
+  left: 32%;  
+  top: 20%;
   background-color: white;
+  display: grid;
+  align-items: center;
+  border: 2px solid #fb732f;
+  }
+  #popup p{
+    display: grid;
+    align-content: center;
+    text-align: center;
+    height: 70px;
+    width: 150px;
+    align-self: center;
+    justify-self:center;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+#popup p:hover{
+  background-color: #59d6e9;
+  box-shadow: 2px 2px 5px #66ffff;
+  transition: .5s;
 }
