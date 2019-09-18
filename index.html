@@ -3,26 +3,41 @@
 <head>
 	<title>Login</title>
 	<meta charset="utf-8"/>
+	<link href="https://fonts.googleapis.com/css?family=Copse&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="/home/talmiz/Git/College-App/design.css">
 	<script type="text/javascript">
 		function tr() {
-			document.getElementById("troll").style.visibility=("hidden" ? "visible" : "hidden");
+			if(document.getElementById("troll").style.visibility="hidden")
+			document.getElementById("troll").style.visibility="visible";
+			else
+			document.getElementById("troll").style.visibility="visible";
 		}
 		function validate() {
 			var mail=document.getElementById("email").value;
 			var pass=document.getElementById("pass").value;
-			var regex =/^[a-zA-Z]+@[a-zA-Z]+\.com/;
-			if(regex.test(mail))
-				alert("okay");
+			var regexmail =/^[a-zA-Z]+@[a-zA-Z]+\.com/;
+			var regexpass=/\w{4,}/;
+			if(regexmail.test(mail)&&regexpass.test(pass)){
+				document.getElementById("shade").style.display="block";
+				document.getElementById("popup").style.visibility="visible";
+			}
 			else
-				alert("Nop");
-		}
-	</script>
-</head>
-<body>
-	<div id="shade">
+					if(regexmail.test(mail)==0)
+						alert("E-mail is in the incorrect format\n(name)@(server).com");
+					else if(pass.length<3)
+						alert("Password must be atleast 4 characters");
+			}
+			function back() {
+				document.getElementById("shade").style.display="none";
+				document.getElementById("popup").style.visibility="hidden";
+			}
+		</script>
+	</head>
+	<body>
+		<div id="shade">
+			<div id="popup">Hello!<p onclick="back()">Hi</p></div>
+		</div>		
 		<div class="container">
-			<div id="popup">Hello!<p>Hi</p></div>
 			<div class="grid-item item-1"><img id="ramaiah" src="/home/talmiz/Git/College-App/images/1527234792.png"/></div>
 			<div class="grid-item item-2">
 				<div class="login">
@@ -34,16 +49,13 @@
 
 						<p><input id="email" type="email" placeholder="Email"></p>
 						<p><input id="pass" type="password" placeholder="Password"></p>
-						<p><input onclick="validate()" type="button"value="Log In" ></p>
+						<p><input onclick="validate()" type="button" value="Log In" ></p>
 						<div class="lol a" onclick="tr()">New here? Sign up!</div>
 						<div class="lol b"><img id="troll" src="/home/talmiz/Git/College-App/images/TrollFace.jpg"></div>
 					</form>
 				</div>
-
-
 			</div>
-			<div class="grid-item item-3"><marquee>&copy Copyright Talmiz</marquee></p></div>
+			<div class="grid-item item-3"><p>Git</p></div>
 		</div>
-	</div>
-</body>
-</html>
+	</body>
+	</html>
