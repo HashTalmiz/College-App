@@ -6,37 +6,44 @@
 	<link rel="stylesheet" type="text/css" href="/home/talmiz/Git/College-App/design.css">
 	<script type="text/javascript">
 		function tr() {
-			if(document.getElementById("troll").style.visibility="hidden")
-				document.getElementById("troll").style.visibility="visible";
+			document.getElementById("troll").style.visibility=("hidden" ? "visible" : "hidden");
 		}
 		function validate() {
-			var str=document.getElementById("")
+			var mail=document.getElementById("email").value;
+			var pass=document.getElementById("pass").value;
+			var regex =/^[a-zA-Z]+@[a-zA-Z]+\.com/;
+			if(regex.test(mail))
+				alert("okay");
+			else
+				alert("Nop");
 		}
 	</script>
 </head>
 <body>
-	<div id="shade" class="container">
-		<div id="popup">Hello!<p>Hi</p></div>
-		<div class="grid-item item-1"><img id="ramaiah" src="/home/talmiz/Git/College-App/images/1527234792.png"/></div>
-		<div class="grid-item item-2">
-			<div class="login">
+	<div id="shade">
+		<div class="container">
+			<div id="popup">Hello!<p>Hi</p></div>
+			<div class="grid-item item-1"><img id="ramaiah" src="/home/talmiz/Git/College-App/images/1527234792.png"/></div>
+			<div class="grid-item item-2">
+				<div class="login">
 
 
-				<h2 class="login-header">Log in</h2>
+					<h2 class="login-header">Log in</h2>
 
-				<form class="login-container">
+					<form class="login-container">
 
-					<p><input type="email" placeholder="Email"></p>
-					<p><input type="password" placeholder="Password"></p>
-					<p><input type="submit"value="Log In" onclick="validate()"></p>
-					<div class="lol a" onclick="tr()">New here? Sign up!</div>
-					<div class="lol b"><img id="troll" src="/home/talmiz/Git/College-App/images/TrollFace.jpg"></div>
-				</form>
+						<p><input id="email" type="email" placeholder="Email"></p>
+						<p><input id="pass" type="password" placeholder="Password"></p>
+						<p><input onclick="validate()" type="button"value="Log In" ></p>
+						<div class="lol a" onclick="tr()">New here? Sign up!</div>
+						<div class="lol b"><img id="troll" src="/home/talmiz/Git/College-App/images/TrollFace.jpg"></div>
+					</form>
+				</div>
+
+
 			</div>
-
-
+			<div class="grid-item item-3"><marquee>&copy Copyright Talmiz</marquee></p></div>
 		</div>
-		<div class="grid-item item-3"><marquee>&copy Copyright Talmiz</marquee></p></div>
 	</div>
 </body>
 </html>

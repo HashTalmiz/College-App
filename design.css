@@ -51,8 +51,8 @@ body {
 
 .login-header {
   background: #28d;
-  padding: 10px;
-  font-size: 1.9em;
+  padding: 19px;
+  font-size: 2.3em;
   font-weight: normal;
   text-align: center;
   text-transform: uppercase;
@@ -97,19 +97,19 @@ body {
   border-color: #888;
 }
 
-.login input[type="submit"] {
+.login input[type="button"] {
   background: #28d;
   border-color: transparent;
   color: #fff;
   cursor: pointer;
 }
 
-.login input[type="submit"]:hover {
+.login input[type="button"]:hover {
   background: #17c;
 }
 
 /* Buttons' focus effect */
-.login input[type="submit"]:focus {
+.login input[type="button"]:focus {
   border-color: #05a;
 }
 
@@ -122,6 +122,7 @@ body {
 }
 .lol:hover{
   color: red;
+  text-shadow: .5px .5px .5px grey;
   cursor: pointer;
 }
 .b, #troll{
