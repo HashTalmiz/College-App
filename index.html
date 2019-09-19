@@ -6,6 +6,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Copse&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="/home/talmiz/Git/College-App/design.css">
 	<script type="text/javascript">
+		
 		function tr() {
 			if(document.getElementById("troll").style.visibility="hidden")
 				document.getElementById("troll").style.visibility="visible";
@@ -24,7 +25,7 @@
 			else
 				if(regexmail.test(mail)==0)
 					alert("E-mail is in the incorrect format\n(name)@(server).com");
-				else if(pass.length<3)
+				else if(pass.length<=3)
 					alert("Password must be atleast 4 characters");
 			}
 			function back() {
@@ -35,7 +36,7 @@
 	</head>
 	<body>
 		<div id="shade">
-			<div id="popup">Hello!<p onclick="back()">Hi</p></div>
+			<div id="popup">Hello! <br>You made it through!<p onclick="back()">Hi</p></div>
 		</div>		
 		<div class="container">
 			<div class="grid-item item-1"><img id="ramaiah" src="/home/talmiz/Git/College-App/images/1527234792.png"/></div>
@@ -47,7 +48,7 @@
 
 					<form class="login-container">
 
-						<p><input id="email" type="email" onkeyup="check()" placeholder="Email"></p>
+						<p><input id="email" type="email"  placeholder="Email"></p>
 						<p><input id="pass" type="password" placeholder="Password"></p>
 						<p><input onclick="validate()" type="button" value="Log In" ></p>
 						<div class="lol a" onclick="tr()">New here? Sign up!</div>

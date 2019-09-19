@@ -25,15 +25,6 @@
   justify-content: center;
   align-content: center;
 }
-a{
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  height: 40px;
-  width: 40px;
-  color: white;
-  border-radius: 50%;
-}
 
 
 body {
@@ -151,17 +142,18 @@ body {
 
 #popup{
   visibility: hidden;
+  color: orange;
   border-radius: 0px 90px;
   position: fixed;
   text-align: center;
-  height: 250px !important;
+  height: 250px !important; 
   width: 500px !important;
   left: 31.5%;  
   top: 20%;
-  background-color: white;
   display: grid;
   align-items: center;
   border: 2px solid #fb732f;
+  background-image: linear-gradient(120deg,#013243,#00b5cc);
   }
   #popup p{
     display: grid;
@@ -177,7 +169,6 @@ body {
 #popup p:hover{
   border-radius: 30px;
   background-color: #59d6e9;
-  box-shadow: 2px 2px 5px #66ffff;
   transition: .5s;
 }
 #shade{
