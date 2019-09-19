@@ -8,24 +8,24 @@
 	<script type="text/javascript">
 		function tr() {
 			if(document.getElementById("troll").style.visibility="hidden")
-			document.getElementById("troll").style.visibility="visible";
+				document.getElementById("troll").style.visibility="visible";
 			else
-			document.getElementById("troll").style.visibility="visible";
+				document.getElementById("troll").style.visibility="visible";
 		}
 		function validate() {
 			var mail=document.getElementById("email").value;
 			var pass=document.getElementById("pass").value;
 			var regexmail =/^[a-zA-Z]+@[a-zA-Z]+\.com/;
-			var regexpass=/\w{4,}/;
+			var regexpass=/.{4,}/;
 			if(regexmail.test(mail)&&regexpass.test(pass)){
 				document.getElementById("shade").style.display="block";
 				document.getElementById("popup").style.visibility="visible";
 			}
 			else
-					if(regexmail.test(mail)==0)
-						alert("E-mail is in the incorrect format\n(name)@(server).com");
-					else if(pass.length<3)
-						alert("Password must be atleast 4 characters");
+				if(regexmail.test(mail)==0)
+					alert("E-mail is in the incorrect format\n(name)@(server).com");
+				else if(pass.length<3)
+					alert("Password must be atleast 4 characters");
 			}
 			function back() {
 				document.getElementById("shade").style.display="none";
@@ -47,7 +47,7 @@
 
 					<form class="login-container">
 
-						<p><input id="email" type="email" placeholder="Email"></p>
+						<p><input id="email" type="email" onkeyup="check()" placeholder="Email"></p>
 						<p><input id="pass" type="password" placeholder="Password"></p>
 						<p><input onclick="validate()" type="button" value="Log In" ></p>
 						<div class="lol a" onclick="tr()">New here? Sign up!</div>
@@ -55,7 +55,6 @@
 					</form>
 				</div>
 			</div>
-			<div class="grid-item item-3"><p>Git</p></div>
 		</div>
 	</body>
 	</html>
