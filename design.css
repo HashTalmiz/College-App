@@ -1,0 +1,182 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 30px;
+}
+.container{ 
+  padding: 1px;
+  display: grid;
+  grid-gap:5px;
+  grid-template-rows:200px 400px 100px;
+  align-content: stretch;
+}
+
+#ramaiah{
+  display: table;
+  margin: 0 auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+.grid-item{
+}
+.item-2{
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+
+
+body {
+  background-image: linear-gradient(110deg,#1f3a93,#f9690e);
+  font-family: 'Copse', serif;
+}
+
+.login {
+  width: 400px;
+  font-size: 12px;
+}
+
+/* Reset top and bottom margins from certain elements */
+.login-header,
+.login p {
+  margin-top: 0;
+  margin-bottom: 0;
+  letter-spacing: 2px;
+}
+
+
+.login-header {
+  border-radius: 0px 80px 0px 0px;
+  background-image: linear-gradient(140deg,#3a539b,#f15a22);
+  padding: 19px;
+  font-size: 2.3em;
+  font-weight: normal;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.login-container {
+  height: 300px;
+  background: #ebebeb;
+  padding: 8px;
+  display: grid;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 0px 0px 0px 80px;
+
+
+}
+
+/* Every row inside .login-container is defined with p tags */
+.login p {
+  padding: 8px;
+}
+
+.login input {
+  border-radius: 20px;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  border-width: 1px;
+  border-style: solid;
+  padding: 10px;
+  outline: 0;
+  font-family: inherit;
+  font-size: 0.6em;
+}
+
+.login input[type="email"],
+.login input[type="password"] {
+  background: #fff;
+  border-color: transparent;
+  color: #555;
+}
+
+/* Text fields' focus effect */
+.login input[type="email"]:focus,
+.login input[type="password"]:focus {
+  border-color: #1f3a93;
+}
+
+.login input[type="button"] {
+  background-image: linear-gradient(140deg,#1e8bc3,#f9690e,#1e8bc3);
+  background-size: 200%;
+  border-color: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+
+.login input[type="button"]:hover {
+  background-position: right;
+}
+
+/* Buttons' focus effect */
+.login input[type="button"]:focus {
+  border-color: #05a;
+}
+
+.lol{
+  height: 40px;
+  text-align: center;
+  font-size: 17px;
+  padding: 13px;
+  color:#17c;
+}
+.lol:hover{
+  color: red;
+  text-shadow: .5px .5px .5px grey;
+  cursor: pointer;
+}
+.b, #troll{
+  visibility: hidden;
+  height: 70px;
+  width: 100px;
+  padding: 0;
+  justify-self: center;
+  max-height: 100%
+  max-width:100%;
+}
+
+#popup{
+  visibility: hidden;
+  color: orange;
+  border-radius: 0px 90px;
+  position: fixed;
+  text-align: center;
+  height: 250px !important; 
+  width: 500px !important;
+  left: 31.5%;  
+  top: 20%;
+  display: grid;
+  align-items: center;
+  border: 2px solid #fb732f;
+  background-image: linear-gradient(120deg,#013243,#00b5cc);
+  }
+  #popup p{
+    display: grid;
+    align-content: center;
+    text-align: center;
+    height: 70px;
+    width: 150px;
+    align-self: center;
+    justify-self:center;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+#popup p:hover{
+  border-radius: 30px;
+  background-color: #59d6e9;
+  transition: .5s;
+}
+#shade{
+  display: none;
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(56,56,56,0.7); 
+}
