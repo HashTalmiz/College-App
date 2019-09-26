@@ -37,7 +37,6 @@ body {
   font-size: 12px;
 }
 
-/* Reset top and bottom margins from certain elements */
 .login-header,
 .login p {
   margin-top: 0;
@@ -70,7 +69,6 @@ body {
 
 }
 
-/* Every row inside .login-container is defined with p tags */
 .login p {
   padding: 8px;
 }
@@ -95,7 +93,6 @@ body {
   color: #555;
 }
 
-/* Text fields' focus effect */
 .login input[type="email"]:focus,
 .login input[type="password"]:focus {
   border-color: #1f3a93;
@@ -113,7 +110,6 @@ body {
   background-position: right;
 }
 
-/* Buttons' focus effect */
 .login input[type="button"]:focus {
   border-color: #05a;
 }
@@ -141,7 +137,6 @@ body {
 }
 
 #popup{
-  visibility: hidden;
   color: orange;
   border-radius: 0px 90px;
   position: fixed;
@@ -155,24 +150,30 @@ body {
   border: 2px solid #fb732f;
   background-image: linear-gradient(120deg,#013243,#00b5cc);
   }
-  #popup p{
+  #popup a{
     display: grid;
+    color: orange;
+    font-size: 25px;
     align-content: center;
     text-align: center;
-    height: 70px;
-    width: 150px;
+    height: 90px;
+    width: 170px;
     align-self: center;
     justify-self:center;
     border-radius: 10px;
     cursor: pointer;
+    text-decoration: underline wavy blue;
   }
-#popup p:hover{
+  
+#popup a:hover{
   border-radius: 30px;
+  color: #013243;
   background-color: #59d6e9;
+  text-decoration-color: orange;
   transition: .5s;
 }
 #shade{
-  display: none;
+  display: block;
   position: fixed; 
   top: 0;
   left: 0;
